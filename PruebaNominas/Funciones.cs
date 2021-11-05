@@ -540,8 +540,14 @@ namespace PruebaNominas
 
         public string VersionAplicacion()
         {
-            return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
+            #if DEBUG
+                return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
+            #else
+                return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
+            #endif
         }
+
+        bool auto;
 
         public void BuscarVersion()
         {
@@ -549,13 +555,33 @@ namespace PruebaNominas
             {
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                string version;
+
                 using (WebClient client = new WebClient())
                 {
-                    string version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/bin/Debug/ver.txt");
-
-                    if (version != VersionAplicacion())
+#if DEBUG
                     {
-                        System.Windows.MessageBox.Show("Hay una nueva version disponible, actualice la aplicacion para poder continuar", "Nueva version", MessageBoxButton.OK, MessageBoxImage.Information);
+                        version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/bin/Debug/ver.txt");
+                    }
+#else
+                    {
+                        version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/bin/Release/ver.txt");
+                    }
+#endif
+
+                    if (version.CompareTo(VersionAplicacion()) < 0)
+                    {
+                        switch(System.Windows.MessageBox.Show("Hay una nueva version disponible, desea actualizar la aplicacion?", "Nueva version", MessageBoxButton.OK, MessageBoxImage.Information))
+                        {
+                            case MessageBoxResult.OK:
+                                System.Diagnostics.Process.Start(ruta);
+                                break;
+                            case MessageBoxResult.Cancel:
+                                break;
+                        }
+                    } else if (!auto)
+                    {
+                        System.Windows.MessageBox.Show("La version actual es la mas reciente", "Version actual", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }
@@ -565,8 +591,9 @@ namespace PruebaNominas
             }
         }
 
-        public void BuscarVersion(bool actualizacion)
+        public void BuscarVersionAuto(bool actualizacion)
         {
+            auto = true;
             if (!actualizacion)
             {
                 BuscarVersion();

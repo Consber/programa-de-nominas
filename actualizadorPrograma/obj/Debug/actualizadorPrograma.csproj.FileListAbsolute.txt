@@ -1,0 +1,6 @@
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\bin\Debug\actualizadorPrograma.exe.config
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\bin\Debug\actualizadorPrograma.exe
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\bin\Debug\actualizadorPrograma.pdb
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.csproj.CoreCompileInputs.cache
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.exe
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.pdb

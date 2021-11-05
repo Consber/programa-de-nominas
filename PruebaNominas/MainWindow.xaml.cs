@@ -48,7 +48,8 @@ namespace PruebaNominas
                 DTG_Empleados_2_Q.ItemsSource = null;
                 DTG_Empleados_2_Q.ItemsSource = colEmpleadosQ2;
 
-                BuscarVersion(Settings1.Default.IgnorarActualizacion);
+                BuscarVersionAuto(Settings1.Default.IgnorarActualizacion);
+                
             }
         }
 

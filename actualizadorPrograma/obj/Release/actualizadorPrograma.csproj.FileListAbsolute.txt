@@ -1,0 +1,7 @@
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Release\actualizadorPrograma.csproj.AssemblyReference.cache
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Release\actualizadorPrograma.csproj.CoreCompileInputs.cache
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\bin\Release\actualizadorPrograma.exe.config
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\bin\Release\actualizadorPrograma.exe
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\bin\Release\actualizadorPrograma.pdb
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Release\actualizadorPrograma.exe
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Release\actualizadorPrograma.pdb
