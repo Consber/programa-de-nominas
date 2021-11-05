@@ -547,9 +547,11 @@ namespace PruebaNominas
         {
             try
             {
+                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 using (WebClient client = new WebClient())
                 {
-                    string version = client.DownloadString("https://raw.githubusercontent.com/");
+                    string version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/bin/Debug/ver.txt");
 
                     if (version != VersionAplicacion())
                     {

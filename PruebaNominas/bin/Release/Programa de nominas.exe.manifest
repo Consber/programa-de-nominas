@@ -43,24 +43,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Programa de nominas.exe" size="401408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Programa de nominas.exe" size="403968">
       <assemblyIdentity name="Programa de nominas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v6xWNOPryB2S7/Y26mKpWbOTqb3xQPBldhycvS1w9k0=</dsig:DigestValue>
+        <dsig:DigestValue>oH3fTRD38FIZNlmZmcGbVjAR7cL4cJxHQQ5AmqIiSJk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Programa de nominas.exe.config" size="1142">
+  <file name="Programa de nominas.exe.config" size="1395">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>h7R3joLAAcnDNXsc1oSJbnDIBVVWnj5haNXldrM7p+s=</dsig:DigestValue>
+      <dsig:DigestValue>TjJBn92x7+5hMwlESW/OjbIVf40ao9hehpI5fzYORVQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="step0002.ico" size="123005">
