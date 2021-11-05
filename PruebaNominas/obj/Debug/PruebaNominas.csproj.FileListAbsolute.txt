@@ -1,0 +1,43 @@
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\MainWindow.g.cs
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\App.g.cs
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\MainWindow.baml
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\PruebaNominas.Properties.Resources.resources
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\PruebaNominas.csproj.GenerateResource.cache
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\PruebaNominas.csproj.CoreCompileInputs.cache
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\PruebaNominas.csproj.ResolveComReference.cache
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\bin\Debug\Programa de nominas.exe.config
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\bin\Debug\Programa de nominas.exe.manifest
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\bin\Debug\Programa de nominas.application
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\bin\Debug\Programa de nominas.exe
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\bin\Debug\Programa de nominas.pdb
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Programa de nominas_MarkupCompile.cache
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Programa de nominas_MarkupCompile.lref
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Programa de nominas.g.resources
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Programa de nominas.TrustInfo.xml
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Programa de nominas.exe.manifest
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Programa de nominas.application
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Programa de nominas.exe
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Programa de nominas.pdb
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\bin\Debug\Programa de nominas.exe.config
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\bin\Debug\Programa de nominas.exe.manifest
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\bin\Debug\Programa de nominas.application
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\bin\Debug\Programa de nominas.exe
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\bin\Debug\Programa de nominas.pdb
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\PruebaNominas.csproj.AssemblyReference.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\PruebaNominas.csproj.ResolveComReference.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\MainWindow.g.cs
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\App.g.cs
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de nominas_MarkupCompile.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de nominas_MarkupCompile.lref
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\MainWindow.baml
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de nominas.g.resources
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\PruebaNominas.Properties.Resources.resources
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\PruebaNominas.csproj.GenerateResource.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\PruebaNominas.csproj.CoreCompileInputs.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de nominas.TrustInfo.xml
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de nominas.exe.manifest
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de nominas.application
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de nominas.exe
+C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de nominas.pdb
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Dictionary1.baml
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\PruebaNominas.csproj.AssemblyReference.cache
