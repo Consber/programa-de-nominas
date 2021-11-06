@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Timers;
-using System.IO;
-using System.Threading;
-using System.Diagnostics;
 
 namespace PruebaNominas
 {
@@ -28,7 +23,7 @@ namespace PruebaNominas
         {
             if (System.Diagnostics.Process.GetProcessesByName(System.IO.Path.GetFileNameWithoutExtension(System.Reflection.Assembly.GetEntryAssembly().Location)).Count() > 1)
             {
-                MessageBox.Show("El programa se encuentra corriendo. Cierre el programa si desea iniciar de nuevo el programa","Programa duplicado", MessageBoxButton.OK,MessageBoxImage.Stop);
+                MessageBox.Show("El programa se encuentra corriendo. Cierre el programa si desea iniciar de nuevo el programa", "Programa duplicado", MessageBoxButton.OK, MessageBoxImage.Stop);
                 Close();
             }
             else
@@ -49,7 +44,7 @@ namespace PruebaNominas
                 DTG_Empleados_2_Q.ItemsSource = colEmpleadosQ2;
 
                 BuscarVersionAuto(Settings1.Default.IgnorarActualizacion);
-                
+
             }
         }
 
@@ -112,7 +107,7 @@ namespace PruebaNominas
 
         private void check_estilo_Checked(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         private void but_Direccion_Click(object sender, RoutedEventArgs e)
@@ -168,12 +163,12 @@ namespace PruebaNominas
             {
                 ruta = rutaMes + "\\" + nombreArchivo;
                 fecha = dtp_Fecha.SelectedDate;
-            } 
+            }
         }
 
         private void but_Ayuda_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Si no muestra ningun empleado, asegurarse de tener la base de datos en la direccion: " + AppDomain.CurrentDomain.BaseDirectory + "\n\nEl nombre de la base debe llamarse \"Empleados.accdb\" en el formato que se le da.\n\nPara soporte tecnico y guia en el programa, escribir al correo soporte@consber.com.ec y con una imagen del programa con la descripcion de la pregunta o error", "Ayuda de solucion de problemas",MessageBoxButton.OK,MessageBoxImage.Information);
+            MessageBox.Show("Si no muestra ningun empleado, asegurarse de tener la base de datos en la direccion: " + AppDomain.CurrentDomain.BaseDirectory + "\n\nEl nombre de la base debe llamarse \"Empleados.accdb\" en el formato que se le da.\n\nPara soporte tecnico y guia en el programa, escribir al correo soporte@consber.com.ec y con una imagen del programa con la descripcion de la pregunta o error", "Ayuda de solucion de problemas", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void DTG_E_Cambios(object sender, DataGridCellEditEndingEventArgs e)
@@ -209,6 +204,7 @@ namespace PruebaNominas
 
         private void cb_Version_Buscar(object sender, RoutedEventArgs e)
         {
+            auto = false;
             BuscarVersion();
         }
     }

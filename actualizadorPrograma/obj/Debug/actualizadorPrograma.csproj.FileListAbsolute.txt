@@ -4,3 +4,10 @@ C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\bin\D
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.csproj.CoreCompileInputs.cache
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.exe
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.pdb
+C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\bin\Debug\actualizadorPrograma.exe.config
+C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\bin\Debug\actualizadorPrograma.exe
+C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\bin\Debug\actualizadorPrograma.pdb
+C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.csproj.AssemblyReference.cache
+C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.csproj.CoreCompileInputs.cache
+C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.exe
+C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.pdb

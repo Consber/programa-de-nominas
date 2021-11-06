@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Threading;
-using System.IO;
-using System.Runtime.InteropServices;
 using System.Globalization;
+using System.IO;
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Windows;
 using System.Windows.Media;
 using Excel = Microsoft.Office.Interop.Excel;
-using System.Reflection;
 
 namespace PruebaNominas
 {
@@ -28,7 +25,8 @@ namespace PruebaNominas
             try
             {
                 //Comentario
-                Dispatcher.Invoke(() => {
+                Dispatcher.Invoke(() =>
+                {
                     BarraTransicion(1);
                     txt_progreso.Content = "Estado: Inicio";
                 });
@@ -49,7 +47,7 @@ namespace PruebaNominas
 
                 xlWorkBook = xlApp.Workbooks.Add(misValue);
                 xlWorkSheet = xlWorkBook.ActiveSheet as Excel.Worksheet;
-            
+
                 xlWorkSheet.Name = "Numero de cuentas";
 
                 xlApp.DisplayAlerts = false;
@@ -127,52 +125,52 @@ namespace PruebaNominas
                 #region optCeldas
 
                 #region Celdas
-                optCeldas.Cells[2,2].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 2].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,4].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
-                                
-                optCeldas.Cells[2,6].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,6].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
-                                
-                optCeldas.Cells[2,8].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 4].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,10].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,10].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 6].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 6].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,12].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,12].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 8].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,14].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,14].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,14].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 10].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 10].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,16].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 12].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 12].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,18].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,18].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
-                                
-                optCeldas.Cells[2,20].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,20].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 14].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 14].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 14].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,22].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,22].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,22].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 16].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,24].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,24].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 18].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 18].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,26].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,26].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,26].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
-                                
-                optCeldas.Cells[2,28].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,28].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,28].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 20].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 20].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
 
-                optCeldas.Cells[2,30].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,30].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,30].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
-                optCeldas.Cells[2,30].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 22].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 22].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 22].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
+
+                optCeldas.Cells[2, 24].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 24].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+
+                optCeldas.Cells[2, 26].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 26].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 26].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+
+                optCeldas.Cells[2, 28].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 28].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 28].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+
+                optCeldas.Cells[2, 30].Borders[Excel.XlBordersIndex.xlEdgeTop].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 30].Borders[Excel.XlBordersIndex.xlEdgeBottom].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 30].Borders[Excel.XlBordersIndex.xlEdgeRight].LineStyle = Excel.XlLineStyle.xlContinuous;
+                optCeldas.Cells[2, 30].Borders[Excel.XlBordersIndex.xlEdgeLeft].LineStyle = Excel.XlLineStyle.xlContinuous;
                 #endregion
 
                 #endregion
@@ -207,7 +205,7 @@ namespace PruebaNominas
                         numCuentas.Cells[y, x + 7] = c.Beneficiario;
                         numCuentas.Cells[y, x + 8] = c.Telefono;
                         numCuentas.Cells[y, x + 9] = c.Referencia;
-                        
+
                         y++;
                     }
                 }
@@ -234,7 +232,7 @@ namespace PruebaNominas
                         numCuentas.Cells[y, x + 7] = c.Beneficiario;
                         numCuentas.Cells[y, x + 8] = c.Telefono;
                         numCuentas.Cells[y, x + 9] = c.Referencia;
-                        
+
                         y++;
                     }
                 }
@@ -265,13 +263,13 @@ namespace PruebaNominas
                 #region Valores Estilo
                 if (checkEstilo)
                 {
-                    LineasCuadrosRango(true,true,true,true,2,1,2,10, numCuentas, Excel.XlLineStyle.xlContinuous);
-                    numCuentas.Cells[2,1].Interior.Color = System.Drawing.ColorTranslator.ToOle(celdasNa);
-                    LineasCuadrosRango(true,true,true,true,2 + countR + 6,1,2 + countR + 6,10, numCuentas, Excel.XlLineStyle.xlContinuous);
+                    LineasCuadrosRango(true, true, true, true, 2, 1, 2, 10, numCuentas, Excel.XlLineStyle.xlContinuous);
+                    numCuentas.Cells[2, 1].Interior.Color = System.Drawing.ColorTranslator.ToOle(celdasNa);
+                    LineasCuadrosRango(true, true, true, true, 2 + countR + 6, 1, 2 + countR + 6, 10, numCuentas, Excel.XlLineStyle.xlContinuous);
                     numCuentas.Cells[2 + countR + 6, 1].Interior.Color = System.Drawing.ColorTranslator.ToOle(celdasNa);
                 }
-                    #endregion
-                    #endregion
+                #endregion
+                #endregion
 
                 Invoke(10, "Estado: Generando valores planilla: Primera Quincena");
                 #region Primera Quincena
@@ -284,11 +282,11 @@ namespace PruebaNominas
                 pQuincena.Cells[1, 1] = "CONSBER C.A. CONSTRUCTORA BERREZUETA";
                 pQuincena.Cells[2, 1] = "DETALLE DE HABERES";
                 pQuincena.Cells[3, 1] = "1ERA QUINCENA DE " + fecha.Value.ToString("MMMM", ci).ToUpper() + fecha.Value.ToString("yyyy", ci);
-                
+
                 pQuincena.Cells[5, 9] = "INGRESOS";
 
                 pQuincena.Cells[5, 20] = "EGRESOS";
-                
+
                 pQuincena.Cells[6, 1] = "No";
                 pQuincena.Cells[6, 2] = "Fecha Ingreso";
                 pQuincena.Cells[6, 3] = "Fecha Salida";
@@ -388,20 +386,20 @@ namespace PruebaNominas
 
                     if (e.Area == "Operativo")
                     {
-                        pQuincena.Cells[y + 3 , x + 9] = e.Alim;
-                        pQuincena.Cells[y + 3 , x + 10] = e.Transp;
-                        pQuincena.Cells[y + 3 , x + 11] = e.Bono;
-                        pQuincena.Cells[y + 3 , x + 12] = e.TarjetaIngresos;
-                        pQuincena.Cells[y + 3 , x + 13] = e.HorasExtra;
-                        pQuincena.Cells[y + 3 , x + 14] = e.Vacaciones;
-                        pQuincena.Cells[y + 3 , x + 20] = e.PrestHipot;
-                        pQuincena.Cells[y + 3 , x + 21] = e.PrestQuiro;
-                        pQuincena.Cells[y + 3 , x + 22] = e.PrestCia;
-                        pQuincena.Cells[y + 3 , x + 23] = e.Multas;
-                        pQuincena.Cells[y + 3 , x + 24] = e.ExtSalud;
-                        pQuincena.Cells[y + 3 , x + 25] = e.TarjetaEgresos;
-                        pQuincena.Cells[y + 3 , x + 26] = e.ContribucionSolidaria;
-                        pQuincena.Cells[y + 3 , x + 27] = e.AnticipoQuincena;
+                        pQuincena.Cells[y + 3, x + 9] = e.Alim;
+                        pQuincena.Cells[y + 3, x + 10] = e.Transp;
+                        pQuincena.Cells[y + 3, x + 11] = e.Bono;
+                        pQuincena.Cells[y + 3, x + 12] = e.TarjetaIngresos;
+                        pQuincena.Cells[y + 3, x + 13] = e.HorasExtra;
+                        pQuincena.Cells[y + 3, x + 14] = e.Vacaciones;
+                        pQuincena.Cells[y + 3, x + 20] = e.PrestHipot;
+                        pQuincena.Cells[y + 3, x + 21] = e.PrestQuiro;
+                        pQuincena.Cells[y + 3, x + 22] = e.PrestCia;
+                        pQuincena.Cells[y + 3, x + 23] = e.Multas;
+                        pQuincena.Cells[y + 3, x + 24] = e.ExtSalud;
+                        pQuincena.Cells[y + 3, x + 25] = e.TarjetaEgresos;
+                        pQuincena.Cells[y + 3, x + 26] = e.ContribucionSolidaria;
+                        pQuincena.Cells[y + 3, x + 27] = e.AnticipoQuincena;
 
                         y++;
                     }
@@ -433,7 +431,7 @@ namespace PruebaNominas
                         //Total Ingresos
                         pQuincena.Range[pQuincena.Cells[y, x + 8], pQuincena.Cells[y, x + 18]].NumberFormat = formatoContabilidad;
                         pQuincena.Cells[y, x + 8] = "=" + LetraColumna(x + 6) + y + "*" + LetraColumna(x + 7) + y;
-                        
+
                         if (checkFR[e.Id - 1])
                         {
                             pQuincena.Cells[y, x + 15].Value = "=+(" + LetraColumna(x + 8) + y + "+" + LetraColumna(x + 8) + y + ") * 8.33 % ";
@@ -1168,7 +1166,7 @@ namespace PruebaNominas
                 y = 1;
                 x = 1;
                 resumen.Name = "Resumen";
-            
+
                 #region Valores estaticos
                 resumen.Cells[1, 1] = "CONSBER C.A. CONSTRUCTORA BERREZUETA";
                 resumen.Cells[1, 1].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
@@ -1238,7 +1236,7 @@ namespace PruebaNominas
                         countTmp++;
                         resumen.Cells[y, x + 1] = e.FechaIngreso;
                         resumen.Cells[y, x + 2] = e.FechaSalida;
-                        if(resumen.Cells[y,x + 2].Value.ToString() == "0")
+                        if (resumen.Cells[y, x + 2].Value.ToString() == "0")
                         {
                             resumen.Cells[y, x + 2] = "";
                         }
@@ -1390,7 +1388,7 @@ namespace PruebaNominas
                         LineasCuadros(true, true, true, true, 5, i, optCeldas, resumen);
                     }
 
-                    for (int i=1; i<31 ;i++)
+                    for (int i = 1; i < 31; i++)
                     {
                         LineasCuadros(true, true, true, true, 6, i, optCeldas, resumen);
                     }
@@ -1567,32 +1565,6 @@ namespace PruebaNominas
                     roles.Range[roles.Cells[yR + 35, xR + 1], roles.Cells[yR + 35, xR + 5]].Merge();
                     #endregion
 
-                    #region Formato
-                    /*roles[LetraColumna(xR + 4) + (yR + 8)].FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 9)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 10)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 11)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 12)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 13)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 14)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 15)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 16)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 17)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 6) + (yR + 18)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 20)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 21)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 22)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 23)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 24)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 25)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 26)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 27)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 28)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 4) + (yR + 29)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 6) + (yR + 30)].First().FormatString = formatoContabilidad;
-                    roles[LetraColumna(xR + 6) + (yR + 31)].First().FormatString = formatoContabilidad;*/
-                    #endregion
-
                     xR += 8;
                 }
 
@@ -1622,7 +1594,7 @@ namespace PruebaNominas
                         LineasCuadros(true, true, false, true, yR + 6, xR, optCeldas, roles);
                         LineasCuadros(true, true, true, true, yR + 6, xR + 1, optCeldas, roles);
                         LineasCuadrosRango(true, true, false, false, yR + 6, xR + 2, yR + 6, xR + 3, roles, Excel.XlLineStyle.xlContinuous);
-                        LineasCuadros(true, true, true, true, yR + 6, xR + 4, optCeldas,roles);
+                        LineasCuadros(true, true, true, true, yR + 6, xR + 4, optCeldas, roles);
                         LineasCuadros(true, true, true, true, yR + 6, xR + 5, optCeldas, roles);
                         LineasCuadros(true, true, true, false, yR + 6, xR + 6, optCeldas, roles);
 
@@ -1643,7 +1615,8 @@ namespace PruebaNominas
                 }
                 #endregion
 
-                Dispatcher.Invoke(() => {
+                Dispatcher.Invoke(() =>
+                {
                     Clipboard.SetText(tmpCB);
                     BarraTransicion(95);
                 });
@@ -1658,15 +1631,15 @@ namespace PruebaNominas
                     {
                         #region Vacaciones
                         vacaciones = xlWorkBook.Sheets.Add(misValue, numCuentas, 1, misValue) as Excel.Worksheet;
-                        if(e.Apellido.Length + e.Nombre.Length < 26)
+                        if (e.Apellido.Length + e.Nombre.Length < 26)
                         {
                             vacaciones.Name = "VAC " + e.Apellido + " " + e.Nombre;
                         }
-                        else if(e.Apellido.Length + e.Nombre.Split(' ')[0].Length < 28)
+                        else if (e.Apellido.Length + e.Nombre.Split(' ')[0].Length < 28)
                         {
                             vacaciones.Name = "VAC " + e.Apellido + " " + e.Nombre.Split(' ')[0];
                         }
-                        else if(e.Apellido.Split(' ')[0].Length + e.Nombre.Split(' ')[0].Length < 28)
+                        else if (e.Apellido.Split(' ')[0].Length + e.Nombre.Split(' ')[0].Length < 28)
                         {
                             vacaciones.Name = "VAC " + e.Apellido.Split(' ')[0] + " " + e.Nombre.Split(' ')[0];
                         }
@@ -1687,7 +1660,7 @@ namespace PruebaNominas
                         vacaciones.Cells[10, 2] = "N°";
                         vacaciones.Cells[10, 3] = "MESES";
                         vacaciones.Cells[10, 4] = "SUELDO";
-                        for (int i=1; i<=12;i++)
+                        for (int i = 1; i <= 12; i++)
                         {
                             vacaciones.Cells[10 + i, 2] = i;
                             vacaciones.Cells[10 + i, 3].numberFormat = formatoFechaCorta;
@@ -1720,7 +1693,8 @@ namespace PruebaNominas
                 Invoke(98, "Estado: Esperando respuesta de cancelacion");
                 if (intentandoCancelar)
                 {
-                    Dispatcher.Invoke(() => {
+                    Dispatcher.Invoke(() =>
+                    {
                         finalCancelar = true;
                     });
                     _wait.WaitOne();
@@ -1730,14 +1704,16 @@ namespace PruebaNominas
 
                 if (File.Exists(ruta))
                 {
-                    Dispatcher.Invoke(() => {
+                    Dispatcher.Invoke(() =>
+                    {
                         but_generar.IsEnabled = false;
                     });
                     while (FileInUse(ruta))
                     {
                         if (MessageBox.Show("No se puede guardar, cierre el archivo antes de poder guardar", "Error al guardar", MessageBoxButton.OKCancel, MessageBoxImage.Error) == MessageBoxResult.Cancel)
                         {
-                            Dispatcher.Invoke(() => {
+                            Dispatcher.Invoke(() =>
+                            {
                                 BarraTransicion(0);
                                 txt_progreso.Content = "Estado: Cancelado";
                                 check_estilo.IsEnabled = true;
@@ -1763,14 +1739,16 @@ namespace PruebaNominas
                 Marshal.ReleaseComObject(xlWorkBook);
                 Marshal.ReleaseComObject(xlApp);
 
-                Dispatcher.Invoke(() => {
+                Dispatcher.Invoke(() =>
+                {
                     BarraTransicion(100);
                 });
-            
-                MessageBox.Show("Hoja de nominas terminado", "Listo", MessageBoxButton.OK,MessageBoxImage.Asterisk);
+
+                MessageBox.Show("Hoja de nominas terminado", "Listo", MessageBoxButton.OK, MessageBoxImage.Asterisk);
 
 
-                Dispatcher.Invoke(() => {
+                Dispatcher.Invoke(() =>
+                {
                     BarraTransicion(0);
                     txt_progreso.Content = "Estado: Finalizado";
                     check_estilo.IsEnabled = true;
@@ -1789,7 +1767,8 @@ namespace PruebaNominas
             {
                 if (c.HResult == -2146233040)
                 {
-                    Dispatcher.Invoke(() => {
+                    Dispatcher.Invoke(() =>
+                    {
                         BarraTransicion(0);
                         txt_progreso.Content = "Estado: Planilla cancelada";
                         check_estilo.IsEnabled = true;
@@ -1807,7 +1786,8 @@ namespace PruebaNominas
                 else
                 {
                     MessageBox.Show("Error en la seccion " + posError + ". \nMensaje del error: " + c.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    Dispatcher.Invoke(() => {
+                    Dispatcher.Invoke(() =>
+                    {
                         BarraTransicion(0);
                         txt_progreso.Content = "Estado: Error al generar el archivo";
                         check_estilo.IsEnabled = true;
@@ -1824,7 +1804,7 @@ namespace PruebaNominas
                 }
             }
         }
-        
+
         public void LineasCuadros(bool arriba, bool abajo, bool izquierda, bool derecha, int y, int x, Excel.Worksheet ws, double grosor, Excel.XlLineStyle xs)
         {
             if (arriba)
@@ -1856,7 +1836,7 @@ namespace PruebaNominas
 
         public void LineasCuadros(bool arriba, bool abajo, bool izquierda, bool derecha, int y, int x, Excel.Worksheet ws, Excel.Worksheet target)
         {
-            switch (TransformarBooleanos(arriba,abajo,izquierda,derecha))
+            switch (TransformarBooleanos(arriba, abajo, izquierda, derecha))
             {
                 case 1:
                     //0001 Derecha
@@ -1936,7 +1916,7 @@ namespace PruebaNominas
             }
         }
 
-        
+
         public void LineasCuadrosRango(bool arriba, bool abajo, bool izquierda, bool derecha, int y1, int x1, int y2, int x2, Excel.Worksheet ws, double grosor, Excel.XlLineStyle xs)
         {
             if (arriba)
@@ -1963,7 +1943,7 @@ namespace PruebaNominas
                 ws.Range[ws.Cells[y1, x1], ws.Cells[y2, x2]].Borders[Excel.XlBordersIndex.xlEdgeRight].Weight = grosor;
             }
         }
-        
+
 
         public void LineasCuadrosRango(bool arriba, bool abajo, bool izquierda, bool derecha, int y1, int x1, int y2, int x2, Excel.Worksheet ws, Excel.XlLineStyle xs)
         {

@@ -41,3 +41,4 @@ C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de 
 C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Debug\Programa de nominas.pdb
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\Dictionary1.baml
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Debug\PruebaNominas.csproj.AssemblyReference.cache
+C:\Users\javie\source\repos\ProgramaNominas\PruebaNominas\obj\Debug\Dictionary1.baml

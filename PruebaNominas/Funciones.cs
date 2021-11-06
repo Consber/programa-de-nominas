@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Windows;
-using System.Data.OleDb;
-using System.Data;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
 using System.IO;
-using System.Windows.Forms;
 using System.Net;
-using System.Linq;
-using Microsoft.Office;
-using System.Runtime.InteropServices;   //GuidAttribute
-using System.Reflection;                //Assembly
-using System.Threading;                 //Mutex
-using System.Security.AccessControl;    //MutexAccessRule
-using System.Security.Principal;        //SecurityIdentifier
+using System.Windows;
+using System.Windows.Forms;
 
 namespace PruebaNominas
 {
@@ -22,6 +15,7 @@ namespace PruebaNominas
         static string strSqlC = @"Select * from Cuentas";
         static string strDB = @"Provider =Microsoft.ACE.OLEDB.12.0;Data Source = Empleados.accdb";
         string aBin = @"ciapp.bin";
+        string rutaApp = Directory.GetCurrentDirectory() + @"\actualizadorPrograma.exe";
         bool activo = false;
         bool checkEstilo;
         DateTime? fecha;
@@ -196,7 +190,7 @@ namespace PruebaNominas
                     if (KlasReader["FechaSalida"].ToString() != "")
                     {
                         colEmpleados.Add(new Empleados()
-                        { 
+                        {
                             Id = countID,
                             FechaIngreso = Convert.ToDateTime(KlasReader["FechaIngreso"]),
                             FechaSalida = Convert.ToDateTime(KlasReader["FechaSalida"]),
@@ -409,7 +403,8 @@ namespace PruebaNominas
 
         public void Invoke(int tran, string estado)
         {
-            Dispatcher.Invoke(() => {
+            Dispatcher.Invoke(() =>
+            {
                 BarraTransicion(tran);
                 txt_progreso.Content = estado;
             });
@@ -450,7 +445,7 @@ namespace PruebaNominas
                 DTG_Empleados.ItemsSource = colEmpleados;
             }
         }
-        
+
 
         public void guardarEnBase()
         {
@@ -480,55 +475,15 @@ namespace PruebaNominas
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
 
             }
-
-            //System.Windows.MessageBox.Show("No se pudo guardar los archivos, intente otra carpeta o intente con privilegios elevados","Error al guardar",MessageBoxButton.OK,MessageBoxImage.Error);
         }
 
-        public int TransformarBooleanos(bool b1, bool b2, bool b3, bool b4)
+        private int TransformarBooleanos(bool a, bool b, bool c, bool d)
         {
-            int tmp1, tmp2, tmp3, tmp4;
-
-            if (b1)
-            {
-                tmp1 = 8;
-            }
-            else
-            {
-                tmp1 = 0;
-            }
-
-            if (b2)
-            {
-                tmp2 = 4;
-            }
-            else
-            {
-                tmp2 = 0;
-            }
-
-            if (b3)
-            {
-                tmp3 = 2;
-            }
-            else
-            {
-                tmp3 = 0;
-            }
-
-            if (b4)
-            {
-                tmp4 = 1;
-            }
-            else
-            {
-                tmp4 = 0;
-            }
-
-            return tmp1 + tmp2 + tmp3 + tmp4;
+            return (a ? 8 : 0) | (b ? 4 : 0) | (c ? 2 : 0) | (d ? 1 : 0);
         }
 
         public void GuardarAjuste(double x, double y)
@@ -537,11 +492,26 @@ namespace PruebaNominas
             Settings1.Default.XVentana = x;
             Settings1.Default.Save();
         }
+        string version;
 
         public string VersionAplicacion()
         {
             #if DEBUG
-                return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
+            {
+                try
+                {
+                    string rutaVer = Directory.GetCurrentDirectory() + @"\ver.txt";
+
+                    using (StreamReader sr = new StreamReader(rutaVer))
+                    {
+                        return version = sr.ReadToEnd();
+                    }
+                }
+                catch
+                {
+                    return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
+                }
+            }
             #else
                 return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
             #endif
@@ -555,31 +525,36 @@ namespace PruebaNominas
             {
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                string version;
 
                 using (WebClient client = new WebClient())
                 {
-#if DEBUG
+                    #if DEBUG
                     {
                         version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/bin/Debug/ver.txt");
                     }
-#else
+                    #else
                     {
                         version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/bin/Release/ver.txt");
                     }
-#endif
+                    #endif
 
-                    if (version.CompareTo(VersionAplicacion()) < 0)
+                    if (VersionAplicacion().CompareTo(version) < 0)
                     {
-                        switch(System.Windows.MessageBox.Show("Hay una nueva version disponible, desea actualizar la aplicacion?", "Nueva version", MessageBoxButton.OK, MessageBoxImage.Information))
+                        switch (System.Windows.MessageBox.Show(" sHay una nueva version disponible, desea actualizar la aplicacion?", "Nueva version", MessageBoxButton.OKCancel, MessageBoxImage.Information))
                         {
                             case MessageBoxResult.OK:
-                                System.Diagnostics.Process.Start(ruta);
+                                #if !DEBUG
+                                {
+                                    AbrirPrograma(rutaApp, "-auto");
+                                    Close();
+                                }
+                                #endif
                                 break;
                             case MessageBoxResult.Cancel:
                                 break;
                         }
-                    } else if (!auto)
+                    }
+                    else if (!auto)
                     {
                         System.Windows.MessageBox.Show("La version actual es la mas reciente", "Version actual", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
@@ -611,12 +586,22 @@ namespace PruebaNominas
             string ruta = AppDomain.CurrentDomain.BaseDirectory;
 
             // Escribe en un archivo la version
-            using (StreamWriter writer = new StreamWriter(ruta + "\\ver.txt"))
+#if RELEASE
             {
-                writer.WriteLine(VersionAplicacion());
-            }
+                using (StreamWriter writer = new StreamWriter(ruta + "\\ver.txt"))
+                {
+                    writer.WriteLine(VersionAplicacion());
+                }
 
-            Settings1.Default.Version = VersionAplicacion();
+                Settings1.Default.Version = VersionAplicacion();
+            }
+#endif
+        }
+
+        // Abrir programa con parametros
+        public void AbrirPrograma(string ruta, string parametros)
+        {
+            System.Diagnostics.Process.Start(ruta, parametros);
         }
     }
 }
