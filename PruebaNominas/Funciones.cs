@@ -540,7 +540,7 @@ namespace PruebaNominas
 
                     if (VersionAplicacion().CompareTo(version) < 0)
                     {
-                        switch (System.Windows.MessageBox.Show(" sHay una nueva version disponible, desea actualizar la aplicacion?", "Nueva version", MessageBoxButton.OKCancel, MessageBoxImage.Information))
+                        switch (System.Windows.MessageBox.Show("Hay una nueva version disponible, desea actualizar la aplicacion?", "Nueva version", MessageBoxButton.OKCancel, MessageBoxImage.Information))
                         {
                             case MessageBoxResult.OK:
                                 #if !DEBUG
