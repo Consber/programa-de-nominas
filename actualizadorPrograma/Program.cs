@@ -95,6 +95,7 @@ namespace actualizadorPrograma
                             {
                                 writer.WriteLine(version);
                             }
+                            System.Diagnostics.Process.Start(rutaAplicacion);
                         }
                     }
                     else

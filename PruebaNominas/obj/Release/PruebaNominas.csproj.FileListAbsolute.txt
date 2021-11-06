@@ -23,7 +23,6 @@ C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\bin\Release\Programa d
 C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\bin\Release\Programa de nominas.application
 C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\bin\Release\Programa de nominas.exe
 C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\bin\Release\Programa de nominas.pdb
-C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Release\PruebaNominas.csproj.AssemblyReference.cache
 C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Release\PruebaNominas.csproj.ResolveComReference.cache
 C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Release\MainWindow.g.cs
 C:\Users\javie\Source\Repos\ProgramaNominas\PruebaNominas\obj\Release\App.g.cs
