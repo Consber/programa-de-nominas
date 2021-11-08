@@ -496,7 +496,7 @@ namespace PruebaNominas
 
         public string VersionAplicacion()
         {
-            #if DEBUG
+#if DEBUG
             {
                 try
                 {
@@ -512,9 +512,9 @@ namespace PruebaNominas
                     return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
                 }
             }
-            #else
-                return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
-            #endif
+#else
+            return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
+#endif
         }
 
         bool auto;
@@ -530,16 +530,17 @@ namespace PruebaNominas
                 {
                     #if DEBUG
                     {
-                        version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/bin/Debug/ver.txt");
+                        version = "1.0.0.0";
                     }
                     #else
                     {
-                        version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/bin/Release/ver.txt");
+                        version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/Publico/ver.txt");
                     }
-                    #endif
+#endif
 
-                    if (VersionAplicacion().CompareTo(version) < 0)
+                    if(VersionAplicacion().CompareTo(QuitarEspacios(version)) < 0)
                     {
+
                         switch (System.Windows.MessageBox.Show("Hay una nueva version disponible, desea actualizar la aplicacion?", "Nueva version", MessageBoxButton.OKCancel, MessageBoxImage.Information))
                         {
                             case MessageBoxResult.OK:
@@ -602,6 +603,12 @@ namespace PruebaNominas
         public void AbrirPrograma(string ruta, string parametros)
         {
             System.Diagnostics.Process.Start(ruta, parametros);
+        }
+
+        // Quitar saltos de linea
+        public string QuitarEspacios(string cadena)
+        {
+            return cadena.Replace("\n", "").Replace("\r", "");
         }
     }
 }
