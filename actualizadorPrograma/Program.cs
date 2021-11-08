@@ -68,7 +68,7 @@ namespace actualizadorPrograma
                         }
                         #else
                         {
-                            version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/PruebaNominas/Publico/ver.txt");
+                            version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/Publico/ver.txt");
                         }
                         #endif
                     }   
