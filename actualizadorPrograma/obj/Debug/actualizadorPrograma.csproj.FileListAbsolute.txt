@@ -11,3 +11,4 @@ C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\obj\Debug\actua
 C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.csproj.CoreCompileInputs.cache
 C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.exe
 C:\Users\javie\source\repos\ProgramaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.pdb
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\actualizadorPrograma\obj\Debug\actualizadorPrograma.csproj.AssemblyReference.cache
