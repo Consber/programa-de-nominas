@@ -448,6 +448,8 @@ namespace ProgramaNominas
 
         bool auto;
 
+
+
         public void BuscarVersion()
         {
             try
@@ -455,22 +457,23 @@ namespace ProgramaNominas
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
+                // Busca la version mas nueva
                 using (WebClient client = new WebClient())
                 {
                     #if DEBUG
                     {
-                        version = "1.0.0.0";
+                        version = "1.0.0.1";
                     }
                     #else
                     {
-                        version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/Publico/ver.txt");
+                        version = client.DownloadString("https://raw.githubusercontent.com/Consber/Programa-nomina-metadata/main/version.txt");
                     }
                     #endif
 
-                    if(VersionAplicacion().CompareTo(QuitarEspacios(version)) < 0)
+                    if (VersionAplicacion().CompareTo(QuitarEspacios(version)) < 0)
                     {
 
-                        switch (System.Windows.MessageBox.Show("Hay una nueva version disponible, desea actualizar la aplicacion?", "Nueva version", MessageBoxButton.OKCancel, MessageBoxImage.Information))
+                        switch (System.Windows.MessageBox.Show("Hay una nueva version disponible, ¿desea actualizar a la version " + version + "?", "Nueva version", MessageBoxButton.OKCancel, MessageBoxImage.Information))
                         {
                             case MessageBoxResult.OK:
                                 #if !DEBUG
@@ -486,13 +489,13 @@ namespace ProgramaNominas
                     }
                     else if (!auto)
                     {
-                        System.Windows.MessageBox.Show("La version actual es la mas reciente", "Version actual", MessageBoxButton.OK, MessageBoxImage.Information);
+                        System.Windows.MessageBox.Show("La version actual es la mas actualizada. Version: " + VersionAplicacion(), "Version mas reciente", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }
             catch
             {
-                System.Windows.MessageBox.Show("No se pudo conectar con el servidor, intente mas tarde", "Error de conexion", MessageBoxButton.OK, MessageBoxImage.Error);
+                System.Windows.MessageBox.Show("No se pudo conectar con el servidor, intente de nuevo o mas tarde", "Error de conexion", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -516,7 +519,7 @@ namespace ProgramaNominas
             string ruta = AppDomain.CurrentDomain.BaseDirectory;
 
             // Escribe en un archivo la version
-            #if RELEASE
+            #if !DEBUG
             {
                 using (StreamWriter writer = new StreamWriter(ruta + "\\ver.txt"))
                 {

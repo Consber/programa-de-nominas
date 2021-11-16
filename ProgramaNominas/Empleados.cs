@@ -24,23 +24,23 @@ namespace ProgramaNominas
         public string Nombre { set; get; }
         public int DiasTrabajados { set; get; }
         //Ingresos
-        public int Alim { set; get; } //Alimentacion I
-        public int Transp { set; get; }
-        public int Bono { set; get; }
-        public int TarjetaIngresos { set; get; }
-        public int HorasExtra { set; get; }
-        public int Vacaciones { set; get; }
+        public double Alim { set; get; } //Alimentacion I
+        public double Transp { set; get; }
+        public double Bono { set; get; }
+        public double TarjetaIngresos { set; get; }
+        public double HorasExtra { set; get; }
+        public double Vacaciones { set; get; }
         public bool FondosReserva { set; get; }
         public bool DecimoTercero { set; get; }
         public bool DecimoCuarto { set; get; }
         //Egresos
-        public int PrestHipot { set; get; }
-        public int PrestQuiro { set; get; }
-        public int PrestCia { set; get; }
-        public int Multas { set; get; }
-        public int ExtSalud { set; get; }
-        public int TarjetaEgresos { set; get; }
-        public int ContribucionSolidaria { set; get; }
-        public int AnticipoQuincena { set; get; }
+        public double PrestHipot { set; get; }
+        public double PrestQuiro { set; get; }
+        public double PrestCia { set; get; }
+        public double Multas { set; get; }
+        public double ExtSalud { set; get; }
+        public double TarjetaEgresos { set; get; }
+        public double ContribucionSolidaria { set; get; }
+        public double AnticipoQuincena { set; get; }
     }
 }

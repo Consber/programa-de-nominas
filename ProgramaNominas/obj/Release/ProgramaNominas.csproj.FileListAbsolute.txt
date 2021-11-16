@@ -19,3 +19,25 @@ C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Release\
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Release\Programa de nominas.TrustInfo.xml
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Release\Programa de nominas.exe.manifest
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\PruebaNominas\obj\Release\Programa de nominas.application
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\bin\Release\Programa de nominas.exe.config
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\bin\Release\Programa de nominas.exe.manifest
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\bin\Release\Programa de nominas.application
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\bin\Release\Programa de nominas.exe
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\bin\Release\Programa de nominas.pdb
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\ProgramaNominas.csproj.AssemblyReference.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\ProgramaNominas.csproj.ResolveComReference.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\MainWindow.g.cs
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\App.g.cs
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\Programa de nominas_MarkupCompile.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\Programa de nominas_MarkupCompile.lref
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\Dictionary1.baml
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\MainWindow.baml
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\Programa de nominas.g.resources
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\ProgramaNominas.Properties.Resources.resources
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\ProgramaNominas.csproj.GenerateResource.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\ProgramaNominas.csproj.CoreCompileInputs.cache
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\Programa de nominas.TrustInfo.xml
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\Programa de nominas.exe.manifest
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\Programa de nominas.application
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\Programa de nominas.exe
+C:\Users\javie\Source\Repos\ProgramaNominas\ProgramaNominas\obj\Release\Programa de nominas.pdb

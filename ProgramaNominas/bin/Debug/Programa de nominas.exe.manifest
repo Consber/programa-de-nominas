@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Programa de nominas.exe" size="411136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Programa de nominas.exe" size="410624">
       <assemblyIdentity name="Programa de nominas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ScDWQe58UmgLtvPSpcfnFSj+hEnpL5LFbcEw8TsubcA=</dsig:DigestValue>
+        <dsig:DigestValue>TQaVtRR7UAMFLviXj1HCEKnO44kIMuCGJcPdCm+hy30=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

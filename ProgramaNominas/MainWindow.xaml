@@ -80,7 +80,6 @@
                         <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
                         <DataGridTextColumn Header="Sueldo Mensual" Binding="{Binding Sueldo_Mensual}"/>
                         <DataGridTextColumn Header="Area" Binding="{Binding Area}"/>
-                        <DataGridCheckBoxColumn Header="Salio en primera quincena" Binding="{Binding SalirPQ}"/>
                         <DataGridCheckBoxColumn Header="Vacaciones" Binding="{Binding Vacaciones}"/>
                         <DataGridCheckBoxColumn Header="Calcular Dias IESS" Binding="{Binding CalcularDiasIESS}"/>
                     </DataGrid.Columns>

@@ -853,6 +853,83 @@ namespace ProgramaNominas
                         checkDC[e.Id - 1] = false;
                 }
 
+                tmp = y;
+
+                foreach (EmpleadosQ e in DTG_Empleados_2_Q.Items)
+                {
+                    DiasTrabajados[e.Id - 1] = e.DiasTrabajados;
+
+                    if (e.FondosReserva)
+                    {
+                        checkFR[e.Id - 1] = true;
+                    }
+                    else
+                    {
+                        checkFR[e.Id - 1] = false;
+                    }
+
+                    if (e.DecimoTercero)
+                    {
+                        checkDT[e.Id - 1] = true;
+                    }
+                    else
+                    {
+                        checkDT[e.Id - 1] = false;
+                    }
+
+                    if (e.DecimoCuarto)
+                    {
+                        checkDC[e.Id - 1] = true;
+                    }
+                    else
+                    {
+                        checkDC[e.Id - 1] = false;
+                    }
+
+                    if (e.Area == "Administracion")
+                    {
+                        sQuincena.Cells[y, x + 9] = e.Alim;
+                        sQuincena.Cells[y, x + 10] = e.Transp;
+                        sQuincena.Cells[y, x + 11] = e.Bono;
+                        sQuincena.Cells[y, x + 12] = e.TarjetaIngresos;
+                        sQuincena.Cells[y, x + 13] = e.HorasExtra;
+                        sQuincena.Cells[y, x + 14] = e.Vacaciones;
+
+                        sQuincena.Cells[y, x + 20] = e.PrestHipot;
+                        sQuincena.Cells[y, x + 21] = e.PrestQuiro;
+                        sQuincena.Cells[y, x + 22] = e.PrestCia;
+                        sQuincena.Cells[y, x + 23] = e.Multas;
+                        sQuincena.Cells[y, x + 24] = e.ExtSalud;
+                        sQuincena.Cells[y, x + 25] = e.TarjetaEgresos;
+                        sQuincena.Cells[y, x + 26] = e.ContribucionSolidaria;
+                        sQuincena.Cells[y, x + 27] = e.AnticipoQuincena;
+
+                        y++;
+                    }
+
+                    if (e.Area == "Operativo")
+                    {
+                        sQuincena.Cells[y + 3, x + 9] = e.Alim;
+                        sQuincena.Cells[y + 3, x + 10] = e.Transp;
+                        sQuincena.Cells[y + 3, x + 11] = e.Bono;
+                        sQuincena.Cells[y + 3, x + 12] = e.TarjetaIngresos;
+                        sQuincena.Cells[y + 3, x + 13] = e.HorasExtra;
+                        sQuincena.Cells[y + 3, x + 14] = e.Vacaciones;
+                        sQuincena.Cells[y + 3, x + 20] = e.PrestHipot;
+                        sQuincena.Cells[y + 3, x + 21] = e.PrestQuiro;
+                        sQuincena.Cells[y + 3, x + 22] = e.PrestCia;
+                        sQuincena.Cells[y + 3, x + 23] = e.Multas;
+                        sQuincena.Cells[y + 3, x + 24] = e.ExtSalud;
+                        sQuincena.Cells[y + 3, x + 25] = e.TarjetaEgresos;
+                        sQuincena.Cells[y + 3, x + 26] = e.ContribucionSolidaria;
+                        sQuincena.Cells[y + 3, x + 27] = e.AnticipoQuincena;
+
+                        y++;
+                    }
+                }
+
+                y = tmp;
+
                 foreach (Empleados e in DTG_Empleados.Items)
                 {
                     #region Administracion
@@ -877,15 +954,10 @@ namespace ProgramaNominas
                         //Total Ingresos
                         sQuincena.Range[sQuincena.Cells[y, x + 8], sQuincena.Cells[y, x + 18]].NumberFormat = formatoContabilidad;
                         sQuincena.Cells[y, x + 8] = "=" + LetraColumna(x + 6) + y + "*" + LetraColumna(x + 7) + y;
-                        sQuincena.Cells[y, x + 9] = 0;
-                        sQuincena.Cells[y, x + 10].Value = 0;
-                        sQuincena.Cells[y, x + 11].Value = 0;
-                        sQuincena.Cells[y, x + 12].Value = 0;
-                        sQuincena.Cells[y, x + 13].Value = 0;
-                        sQuincena.Cells[y, x + 14].Value = 0;
+
                         if (checkFR[e.Id - 1])
                         {
-                            sQuincena.Cells[y, x + 15].Value = "=+(" + LetraColumna(x + 8) + y + "+'Primera Quincena'!" + LetraColumna(x + 8) + y + ") * 8.33 % ";
+                            sQuincena.Cells[y, x + 15].Value = "=+(" + LetraColumna(x + 8) + y + "+" + LetraColumna(x + 8) + y + ") * 8.33 % ";
                         }
                         else
                         {
@@ -913,16 +985,8 @@ namespace ProgramaNominas
                         sQuincena.Cells[y, x + 18].Value = "=SUM(" + LetraColumna(x + 8) + y + ":" + LetraColumna(x + 17) + (y) + ")";
 
                         //Total Egresos
+                        sQuincena.Cells[y, x + 19] = 0;
                         sQuincena.Range[sQuincena.Cells[y, x + 19], sQuincena.Cells[y, x + 29]].NumberFormat = formatoContabilidad;
-                        sQuincena.Cells[y, x + 19].Value = "=" + LetraColumna(x + 5) + y + " * 9.45%";
-                        sQuincena.Cells[y, x + 20].Value = 0;
-                        sQuincena.Cells[y, x + 21].Value = 0;
-                        sQuincena.Cells[y, x + 22].Value = 0;
-                        sQuincena.Cells[y, x + 23].Value = 0;
-                        sQuincena.Cells[y, x + 24].Value = 0;
-                        sQuincena.Cells[y, x + 25].Value = 0;
-                        sQuincena.Cells[y, x + 26].Value = 0;
-                        sQuincena.Cells[y, x + 27].Value = 0;
 
                         sQuincena.Cells[y, x + 28] = "=SUM(" + LetraColumna(x + 19) + y + ":" + LetraColumna(x + 27) + (y) + ")";
 
@@ -930,13 +994,9 @@ namespace ProgramaNominas
 
                         y++;
                     }
-
-                    foreach (EmpleadosQ q in DTG_Empleados_1_Q.Items)
-                    {
-
-                    }
                     #endregion
                 }
+
                 sQuincena.Cells[8 + countA + 1, 5] = "Total Administración";
 
                 for (int i = 6; i < 31; i++)

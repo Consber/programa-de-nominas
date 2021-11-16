@@ -126,7 +126,7 @@ namespace ProgramaNominas
                 Archivo(false);
                 if (editado)
                 {
-                    switch (MessageBox.Show("Desea guardar los datos?", "Guardar datos", MessageBoxButton.YesNoCancel, MessageBoxImage.Question))
+                    switch (MessageBox.Show("¿Desea guardar los datos?", "Guardar datos", MessageBoxButton.YesNoCancel, MessageBoxImage.Question))
                     {
                         case MessageBoxResult.Yes:
                             GuardarAjuste(Application.Current.MainWindow.Height, Application.Current.MainWindow.Width);
