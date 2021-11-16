@@ -466,7 +466,7 @@ namespace ProgramaNominas
                     }
                     #else
                     {
-                        version = client.DownloadString("https://raw.githubusercontent.com/Consber/Programa-nomina-metadata/main/version.txt");
+                        version = client.DownloadString("https://raw.githubusercontent.com/Consber/programa-de-nominas/main/Publico/ver.txt");
                     }
                     #endif
 
