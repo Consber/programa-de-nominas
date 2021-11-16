@@ -427,19 +427,7 @@ namespace ProgramaNominas
         {
 #if DEBUG
             {
-                try
-                {
-                    string rutaVer = Directory.GetCurrentDirectory() + @"\ver.txt";
-
-                    using (StreamReader sr = new StreamReader(rutaVer))
-                    {
-                        return version = sr.ReadToEnd();
-                    }
-                }
-                catch
-                {
-                    return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
-                }
+                return "1.0.0.0";
             }
 #else
             return System.Windows.Application.ResourceAssembly.GetName().Version.ToString();
@@ -473,7 +461,7 @@ namespace ProgramaNominas
                     if (VersionAplicacion().CompareTo(QuitarEspacios(version)) < 0)
                     {
 
-                        switch (System.Windows.MessageBox.Show("Hay una nueva version disponible, ¿desea actualizar a la version " + version + "?", "Nueva version", MessageBoxButton.OKCancel, MessageBoxImage.Information))
+                        switch (System.Windows.MessageBox.Show("Hay una nueva version disponible, ¿desea actualizar a la version " + QuitarEspacios(version) + "?", "Nueva version", MessageBoxButton.OKCancel, MessageBoxImage.Information))
                         {
                             case MessageBoxResult.OK:
                                 #if !DEBUG
