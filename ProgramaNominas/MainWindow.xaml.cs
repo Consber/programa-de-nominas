@@ -199,5 +199,18 @@ namespace ProgramaNominas
             auto = false;
             BuscarVersion();
         }
+
+        private void ProgramaNominas_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == System.Windows.Input.Key.E && e.Key == System.Windows.Input.Key.LeftShift)
+            {
+                Mensaje("Prueba tecla");
+            }
+        }
+
+        private void ProgramaNominas_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            
+        }
     }
 }
