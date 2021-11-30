@@ -69,11 +69,13 @@ namespace ProgramaNominas
 
         public void Lenguage(string idioma)
         {
+            // Solo carga un idioma
             posError = "Carga de idiomas";
         }
 
         public void AppCerrada(bool activo)
         {
+            // Comprueba que el programa se encuentre cerrado antes de abrir
             char tmp = ' ';
             try
             {
@@ -111,6 +113,7 @@ namespace ProgramaNominas
 
         public string comandoSQL(int num, string strng)
         {
+            // Comandos de SQL para la base con un comando manual
             switch (num)
             {
                 case 0:
@@ -126,6 +129,7 @@ namespace ProgramaNominas
 
         public string comandoSQL(int num)
         {
+            // Comandos de SQL para la base
             switch (num)
             {
                 case 0:
@@ -141,6 +145,7 @@ namespace ProgramaNominas
 
         public void baseDatos()
         {
+            // Carga la base de datos a un DataSet
             posError = "Carga de base de datos";
             OleDbDataAdapter dA = new OleDbDataAdapter(strSqlE, con);
             DataSet ds = new DataSet();
@@ -150,6 +155,7 @@ namespace ProgramaNominas
 
         public void baseEjm()
         {
+            // Pasa todas las variables de la base a variables del programa
             con.ConnectionString = strDB;
             con.Open();
 
@@ -298,6 +304,7 @@ namespace ProgramaNominas
 
         public int DiasMeses(int mes)
         {
+            // Da el ultimo dia dependiendo de la fecha que se le da. Tambien sabe si es año bisiesto y da el dia final de Febrero dependiendo de eso
             switch (mes)
             {
                 case 1:
@@ -350,6 +357,7 @@ namespace ProgramaNominas
 
         private string LetraColumna(int numero)
         {
+            // Devuelve que letra seria un numero. Ejemplo: numero = 4 daria resultado D y numero = 1 seria A. Si es mas de 26, se agrega una letra, ejemplo: 27 seria AA.
             int dividend = numero;
             string columnName = String.Empty;
             int modulo;
@@ -530,5 +538,7 @@ namespace ProgramaNominas
         {
             return cadena.Replace("\n", "").Replace("\r", "");
         }
+
+        
     }
 }
