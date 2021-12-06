@@ -352,41 +352,41 @@ namespace ProgramaNominas
 
                     if (e.Area == "Administracion")
                     {
-                        pQuincena.Cells[y, x + 9] = e.Alim;
-                        pQuincena.Cells[y, x + 10] = e.Transp;
-                        pQuincena.Cells[y, x + 11] = e.Bono;
-                        pQuincena.Cells[y, x + 12] = e.TarjetaIngresos;
-                        pQuincena.Cells[y, x + 13] = e.HorasExtra;
-                        pQuincena.Cells[y, x + 14] = e.Vacaciones;
+                        pQuincena.Cells[y, x + 9] = e.Alim.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 10] = e.Transp.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 11] = e.Bono.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 12] = e.TarjetaIngresos.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 13] = e.HorasExtra.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 14] = e.Vacaciones.ToString("C", CultureInfo.CurrentCulture);
 
-                        pQuincena.Cells[y, x + 20] = e.PrestHipot;
-                        pQuincena.Cells[y, x + 21] = e.PrestQuiro;
-                        pQuincena.Cells[y, x + 22] = e.PrestCia;
-                        pQuincena.Cells[y, x + 23] = e.Multas;
-                        pQuincena.Cells[y, x + 24] = e.ExtSalud;
-                        pQuincena.Cells[y, x + 25] = e.TarjetaEgresos;
-                        pQuincena.Cells[y, x + 26] = e.ContribucionSolidaria;
-                        pQuincena.Cells[y, x + 27] = e.AnticipoQuincena;
+                        pQuincena.Cells[y, x + 20] = e.PrestHipot.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 21] = e.PrestQuiro.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 22] = e.PrestCia.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 23] = e.Multas.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 24] = e.ExtSalud.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 25] = e.TarjetaEgresos.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 26] = e.ContribucionSolidaria.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y, x + 27] = e.AnticipoQuincena.ToString("C", CultureInfo.CurrentCulture);
 
                         y++;
                     }
 
                     if (e.Area == "Operativo")
                     {
-                        pQuincena.Cells[y + 3, x + 9] = e.Alim;
-                        pQuincena.Cells[y + 3, x + 10] = e.Transp;
-                        pQuincena.Cells[y + 3, x + 11] = e.Bono;
-                        pQuincena.Cells[y + 3, x + 12] = e.TarjetaIngresos;
-                        pQuincena.Cells[y + 3, x + 13] = e.HorasExtra;
-                        pQuincena.Cells[y + 3, x + 14] = e.Vacaciones;
-                        pQuincena.Cells[y + 3, x + 20] = e.PrestHipot;
-                        pQuincena.Cells[y + 3, x + 21] = e.PrestQuiro;
-                        pQuincena.Cells[y + 3, x + 22] = e.PrestCia;
-                        pQuincena.Cells[y + 3, x + 23] = e.Multas;
-                        pQuincena.Cells[y + 3, x + 24] = e.ExtSalud;
-                        pQuincena.Cells[y + 3, x + 25] = e.TarjetaEgresos;
-                        pQuincena.Cells[y + 3, x + 26] = e.ContribucionSolidaria;
-                        pQuincena.Cells[y + 3, x + 27] = e.AnticipoQuincena;
+                        pQuincena.Cells[y + 3, x + 9] = e.Alim.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 10] = e.Transp.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 11] = e.Bono.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 12] = e.TarjetaIngresos.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 13] = e.HorasExtra.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 14] = e.Vacaciones.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 20] = e.PrestHipot.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 21] = e.PrestQuiro.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 22] = e.PrestCia.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 23] = e.Multas.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 24] = e.ExtSalud.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 25] = e.TarjetaEgresos.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 26] = e.ContribucionSolidaria.ToString("C", CultureInfo.CurrentCulture);
+                        pQuincena.Cells[y + 3, x + 27] = e.AnticipoQuincena.ToString("C", CultureInfo.CurrentCulture);
 
                         y++;
                     }

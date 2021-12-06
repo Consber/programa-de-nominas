@@ -16,7 +16,7 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="458*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="but_generar" Content="Generar" Margin="0,0,20,86" VerticalAlignment="Bottom" IsDefault="True" Click="Button_Click" Height="72" HorizontalAlignment="Right" Width="153" Grid.Column="2" Background="White" FontFamily="Microsoft Sans Serif" FontSize="18">
+        <Button x:Name="but_generar" Content="Generar" Margin="0,0,20,86" VerticalAlignment="Bottom" IsDefault="True" Click="Button_Click" Height="72" HorizontalAlignment="Right" Width="153" Grid.Column="2" Background="White" FontFamily="Segoe UI" FontSize="18">
             <Button.Effect>
                 <DropShadowEffect Opacity="0.1" BlurRadius="10" ShadowDepth="10" Direction="310"/>
             </Button.Effect>
@@ -43,14 +43,14 @@
         <Label x:Name="txt_progreso" Grid.ColumnSpan="3" Content="Estado: Inactivo" Margin="10,0,10,27" Height="26" VerticalAlignment="Bottom"/>
         <TextBox x:Name="Txtbox_Ruta" IsReadOnly="True" Grid.ColumnSpan="3" Height="45" Margin="99,0,191,113" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" TextChanged="Txtbox_Ruta_TextChanged">
         </TextBox>
-        <Button x:Name="but_Direccion" Grid.ColumnSpan="3" Content="Abrir Ruta" HorizontalAlignment="Left" Height="45" Margin="10,0,0,113" VerticalAlignment="Bottom" Width="84" Click="but_Direccion_Click" BorderThickness="1" Background="White" FontFamily="Microsoft Sans Serif">
+        <Button x:Name="but_Direccion" Grid.ColumnSpan="3" Content="Abrir Ruta" HorizontalAlignment="Left" Height="45" Margin="10,0,0,113" VerticalAlignment="Bottom" Width="84" Click="but_Direccion_Click" BorderThickness="1" Background="White" FontFamily="Segoe UI">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="but_Ayuda" Grid.ColumnSpan="3" Content="Ayuda" HorizontalAlignment="Left" Height="45" Margin="10,0,0,58" VerticalAlignment="Bottom" Width="84" Click="but_Ayuda_Click" Background="White" FontFamily="Microsoft Sans Serif">
+        <Button x:Name="but_Ayuda" Grid.ColumnSpan="3" Content="Ayuda" HorizontalAlignment="Left" Height="45" Margin="10,0,0,58" VerticalAlignment="Bottom" Width="84" Click="but_Ayuda_Click" Background="White" FontFamily="Segoe UI">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>

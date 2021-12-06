@@ -4,7 +4,7 @@
   <description asmv2:iconFile="step0002.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Programa de nominas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Programa de nominas" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
     <commandLine file="Programa de nominas.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Programa de nominas.exe" size="404440">
-      <assemblyIdentity name="Programa de nominas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Programa de nominas.exe" size="404952">
+      <assemblyIdentity name="Programa de nominas" version="1.0.0.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RrpPRwUzu8vyVSDZ1YsFSJbRWNjEF/Zu+8S6rOyb1LI=</dsig:DigestValue>
+        <dsig:DigestValue>oBE+KXEMMqzlZPCrNlmRyXusknEz08DOYyMhIOv9Icc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

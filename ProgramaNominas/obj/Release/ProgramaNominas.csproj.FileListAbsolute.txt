@@ -63,3 +63,4 @@ C:\Users\Javier Berrezueta\source\repos\PruebaNominas\ProgramaNominas\obj\Releas
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\ProgramaNominas\obj\Release\Programa de nominas.application
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\ProgramaNominas\obj\Release\Programa de nominas.exe
 C:\Users\Javier Berrezueta\source\repos\PruebaNominas\ProgramaNominas\obj\Release\Programa de nominas.pdb
+C:\Users\Javier Berrezueta\source\repos\PruebaNominas\ProgramaNominas\obj\Release\ProgramaNominas.csproj.SuggestedBindingRedirects.cache
